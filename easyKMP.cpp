@@ -12,9 +12,9 @@
 #include <vector>
 using namespace std;
 // The following function will calculate the next array of pattern.
-// next[i] is the length of substring(from 0 to i)'s longest prefix and suffix.
+// next[i] is the length of substring(from 0 to i)'s longest common prefix and suffix.
 // For example, the next array of pattern "abcabc" will be {0, 0, 0, 1, 2, 3}.
-// PS: the whole pattern is not a prefix or suffix of itself, thus the next array of "a" is {0}, not {1}!
+// PS: The whole pattern is not a prefix or suffix of itself, thus the next array of "a" is {0}, not {1}!
 void buildNext(const char *pattern, size_t patternLen, size_t *next) {
     next[0] = 0;  // next[0] is always 0, maybe we could optimize this memory unit in the future.
     size_t len = 0;
