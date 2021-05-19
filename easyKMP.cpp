@@ -2,10 +2,10 @@
 // Author: Zhang Bin, majored in CS @UESTC, China, 2021/05/19
 // I'm going to publish this codes to the public, you could do anything you like to use this code.
 // ----------
-// I find almost all the codes of KMP algorithm in the Internet are really awful, especially in CSDN!
-// So I decided to write a beautiful one.
+// I find almost all the codes of KMP algorithm on the Internet are really awful, especially in CSDN.  
+// So I decided to rewrite a beautiful one.
 // The easy KMP algorithm, which is really easy to write and understand.
-// No one could write a faster version of KMP algorithm than mine!
+// No one could write a faster KMP algorithm than mine!
 // ----------
 #include <stdio.h>
 
@@ -13,18 +13,18 @@
 #include <string>
 #include <vector>
 using namespace std;
-// The following code will calculate the next array of pattern.
+// The following function will calculate the next array of pattern.
 // next[i] is the length of substring(from 0 to i)'s longest prefix and suffix.
 // For example, the next array of pattern "abcabc" will be {0, 0, 1, 2, 3}.
 // PS: the whole pattern is not a prefix or suffix of itself, thus the next array of "a" is {0}, not {1}!
 void buildNext(const char *pattern, size_t size, size_t *next) {
-    next[0] = 0;  // next[0] is always 0, maybe we could optimize it in the future.
+    next[0] = 0;  // next[0] is always 0, maybe we could optimize this memory unit in the future.
     size_t len = 0;
     size_t j = 1;
     while (j < size) {
         if (pattern[j] == pattern[len]) {
             // This code block will do the same thing as "next[j] = len+1; len++; j++"
-            // but a little more faster.(The speed will be the same if you add "-O2" in compiling)
+            // but a little bit faster.(The speed will be in the same if you add "-O2" while compiling)
             len++;
             next[j] = len;
             j++;
@@ -42,7 +42,7 @@ void buildNext(const char *pattern, size_t size, size_t *next) {
 void KMP(const char *text, size_t textLen, const char *pattern, size_t patternLen, size_t *next, vector<size_t> &results) {
     size_t i = 0, j = 0;
     while (i < textLen) {
-    // You could ignore the lable "skipWhileCompare" when the first time you read this code.
+    // You could ignore the lable "skipWhileCompare" when the first time you read this code, it's just a trick.
     skipWhileCompare:
         if (text[i] == pattern[j]) {
             i++;
@@ -54,8 +54,8 @@ void KMP(const char *text, size_t textLen, const char *pattern, size_t patternLe
         } else {
             if (j != 0) {
                 j = next[j - 1];
-                // We could skip the compare: "i < textLen?"
-                // because now i is less than textLen, and we haven't changed it.
+                // We could skip the compare: "i < textLen?" in while sentence.
+                // because now i is less than textLen, and we haven't changed it yet. (textLen is a const value.)
                 goto skipWhileCompare;
             } else {
                 i++;
@@ -63,7 +63,7 @@ void KMP(const char *text, size_t textLen, const char *pattern, size_t patternLe
         }
     }
 }
-// Just a test
+//  Test
 int main(int argc, const char *argv[]) {
     string text = "abcababcabc";
     string pattern = "abcabc";
@@ -71,7 +71,7 @@ int main(int argc, const char *argv[]) {
     buildNext(pattern.c_str(), pattern.size(), next);
     vector<size_t> results;
     KMP(text.c_str(), text.size(), pattern.c_str(), pattern.size(), next, results);
-    // Output is:
+    // Output will be like:
     // pattern: a b c a b c
     // next:    0 0 0 1 2 3
     // text:    a b c a b a b c a b c
