@@ -1,8 +1,7 @@
 // ----------
 // Author: Zhang Bin, majored in computer science @UESTC, China.
-// I'm going to publish this codes to the public, using "The Unlicense".
 // ----------
-// I found almost all the codes of KMP algorithm on the Internet were really awful, especially in CSDN.  
+// I found almost all the codes of KMP algorithm on the Internet were really awful, especially in CSDN, a disgusting coping website in China.
 // So I decided to rewrite it for a beautiful one. The easy KMP algorithm, which is really easy to understand and program.
 // No one could write a faster KMP algorithm than mine!
 // ----------
