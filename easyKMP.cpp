@@ -98,5 +98,6 @@ int main(int argc, const char *argv[]) {
         }
     }
     printf("\n");
+    delete[] next;
     return 0;
 }
