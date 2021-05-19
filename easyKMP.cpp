@@ -42,7 +42,7 @@ void buildNext(const char *pattern, size_t size, size_t *next) {
 void KMP(const char *text, size_t textLen, const char *pattern, size_t patternLen, size_t *next, vector<size_t> &results) {
     size_t i = 0, j = 0;
     while (i < textLen) {
-    // You could ignore the lable "skipWhileCompare" druing the first time you read this code, it's just a trick.
+    // You can ignore the lable "skipWhileCompare" druing the first time you read this code, it's just a trick.
     skipWhileCompare:
         if (text[i] == pattern[j]) {
             i++;
