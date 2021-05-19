@@ -21,7 +21,7 @@ void buildNext(const char *pattern, size_t patternLen, size_t *next) {
     size_t j = 1;
     while (j < patternLen) {
         if (pattern[j] == pattern[len]) {
-            // This code block will do the same thing as "next[j] = len+1; len++; j++"
+            // This code block will do the same thing as "next[j] = len+1; len++; j++", 
             // but a little bit faster.(The speed might be in the same if you add "-O2" to compile the code, I'm not sure GCC would discover that or not)
             len++;
             next[j] = len;
