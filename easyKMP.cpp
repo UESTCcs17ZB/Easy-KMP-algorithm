@@ -1,8 +1,10 @@
 // ----------
 // Author: Zhang Bin. Majored in computer science @UESTC, China.
 // ----------
-// I found almost all the codes of KMP algorithm on the Internet were really awful, especially in CSDN, a disgusting website belongs to "Ctrl C+V programmers" in China.
-// So I decided to rewrite it for a beautiful one. The easy KMP algorithm, which is really easy to understand and program.
+// I found almost all the codes of KMP algorithm on the Internet were really awful.
+// Especially in CSDN, a disgusting website belongs to "Ctrl C+V programmers" in China.
+// So I decided to rewrite it for a beautiful one.
+// The easy KMP algorithm, which is really easy to understand and program.
 // No one knows more about how to write a faster KMP algorithm than I do! (just a joke)
 // ----------
 #include <stdio.h>
