@@ -1,6 +1,6 @@
 // ----------
 // Author: Zhang Bin, majored in CS @UESTC, China, 2021/05/19
-// I'm going to publish this codes to the public, you could do anything you like to use this code.
+// I'm going to publish this codes to the public, you can do whatever you want with the code.
 // ----------
 // I find almost all the codes of KMP algorithm on the Internet are really awful, especially in CSDN.  
 // So I decided to rewrite it for a beautiful one.
