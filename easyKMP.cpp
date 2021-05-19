@@ -3,7 +3,7 @@
 // I'm going to publish this codes to the public, you could do anything you like to use this code.
 // ----------
 // I find almost all the codes of KMP algorithm on the Internet are really awful, especially in CSDN.  
-// So I decided to rewrite a beautiful one.
+// So I decided to rewrite it for a beautiful one.
 // The easy KMP algorithm, which is really easy to write and understand.
 // No one could write a faster KMP algorithm than mine!
 // ----------
