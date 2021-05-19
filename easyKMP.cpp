@@ -1,5 +1,5 @@
 // ----------
-// Author: Zhang Bin, majored in CS @UESTC, China, 2021/05/19
+// Author: Zhang Bin, majored in computer science @UESTC, China.
 // I'm going to publish this codes to the public, you can do whatever you want with the code.
 // ----------
 // I found almost all the codes of KMP algorithm on the Internet were really awful, especially in CSDN.  
