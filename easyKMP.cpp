@@ -53,7 +53,7 @@ void KMP(const char *text, size_t textLen, const char *pattern, size_t patternLe
             if (j != 0) {
                 j = next[j - 1];
                 // We could skip the comparison "i < textLen?" in the while sentence.
-                // because now i is less than textLen, and we haven't changed it yet. (textLen is a const value.)
+                // because now i is less than textLen, and we haven't changed it yet. (textLen is a constant value.)
                 goto skipWhileCompare;
             } else {
                 i++;
