@@ -15,11 +15,11 @@ using namespace std;
 // next[i] is the length of substring(from 0 to i)'s longest prefix and suffix.
 // For example, the next array of pattern "abcabc" will be {0, 0, 1, 2, 3}.
 // PS: the whole pattern is not a prefix or suffix of itself, thus the next array of "a" is {0}, not {1}!
-void buildNext(const char *pattern, size_t size, size_t *next) {
+void buildNext(const char *pattern, size_t patternLen, size_t *next) {
     next[0] = 0;  // next[0] is always 0, maybe we could optimize this memory unit in the future.
     size_t len = 0;
     size_t j = 1;
-    while (j < size) {
+    while (j < patternLen) {
         if (pattern[j] == pattern[len]) {
             // This code block will do the same thing as "next[j] = len+1; len++; j++"
             // but a little bit faster.(The speed might be in the same if you add "-O2" to compile the code, I'm not sure GCC would discover that or not)
