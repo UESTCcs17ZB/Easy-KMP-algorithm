@@ -1,3 +1,4 @@
+//！本代码禁止王道考研团队抄袭。
 // ----------
 // Author: Zhang Bin. Majored in computer science @UESTC, China.
 // ----------
